@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function checkForm() {
+            var name = document.getElementById('name').value;
+            console.log(name);
+            if (!/^[\u4e00-\u9fbb]{2,4}$/.test(name)) {
+                alert('姓名输入有误、、');
+                name.focus();
+                return false;
+            }
+            var password = document.getElementById('password');
+            if (password.value.length < 6) {
+                alert('密码输入有误。。');
+                password.focus();
+                return false;
+            }
+            var age = document.getElementById('age');
+            if (!/^\d{2}$/.test(age.value.trim())) {
+                alert('年龄输入有误。。。');
+                age.focus();
+                return false;
+            }
+            var email = document.getElementById('email');
+            if (!/^[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,6}$/i.test(email.value.trim())) {
+                alert('邮箱输入有误。。');
+                email.focus();
+                return false;
+            }
+            var dob = document.getElementById('dob');
+            if (!/^\d{4}-\d{2}-\d{2}$/.test(dob.value.trim())) {
+                alert('出生日期输入有误。。');
+                dob.focus();
+                return false;
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+<form action="http://bing.com" method="post">
+    <input id="name" type="text" name="name" placeholder="姓名" onsubmit="return checkForm()">*(中文)<br>
+    <input id="password" type="password" name="password" placeholder="密码">*(>=6)<br>
+    <input id="gender" type="radio" name="gender" checked="checked">M
+    <input  type="radio" name="gender" >F<br>
+    <input id="age" type="text" name="age" placeholder="年龄">*(number)<br>
+    <input id="email" type="text" name="email" placeholder="邮件">*(合法邮箱地址)<br>
+    <input id="dob" type="text" name="dob" placeholder="出生日期">*(yyyy-MM-dd)<br>
+    <input type="submit" value="注册">
+</form>
+</body>
+</html>
