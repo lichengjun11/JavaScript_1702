@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #d1,
+        #d2{
+            width: 200px;
+            background: lemonchiffon;
+        }
+        #d2{
+            height: 200px;
+            display: none;
+        }
+    </style>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script>
+        $(function () {
+           $('#d1').click(function () {
+               $('#d2').slideToggle(1000);
+           })
+        });
+    </script>
+</head>
+<body>
+<div id="d1">点我展开</div>
+<div id="d2">一寸光阴一寸金，珍惜时间，不做没有结果的事。。有志者事竟成。。</div>
+</body>
+</html>

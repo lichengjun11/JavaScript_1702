@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            background: blanchedalmond;
+            height: 80px;
+        }
+    </style>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script>
+        $(function () {
+           $('button').click(function () {
+            $('div').fadeTo(2000,0.3);
+           }) ;
+        });
+    </script>
+</head>
+<body>
+<button>click</button>
+<div>div...</div>
+</body>
+</html>
