@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
+    <script src="js/jquery-3.2.1.js"></script>
+    <script>
+        $(function () {
+           $('p').click(function () {
+               $('p').fadeTo(500,0.5);
+           }) ;
+        });
+    </script>
 </head>
 <body>
-
+<p>Click this paragraph to see it fade.</p>
 </body>
 </html>
